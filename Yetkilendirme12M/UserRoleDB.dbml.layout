@@ -1,0 +1,50 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ordesignerObjectsDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 11, 8.5" name="UserRoleDB">
+  <DataContextMoniker Name="/UserRoleDBDataContext" />
+  <nestedChildShapes>
+    <classShape Id="36cba425-e8f6-4fae-b797-d599e21ecaa5" absoluteBounds="1.25, 0.625, 2, 4.8477197265625">
+      <DataClassMoniker Name="/UserRoleDBDataContext/User" />
+      <nestedChildShapes>
+        <elementListCompartment Id="40ec2cb6-3cc3-4a36-bce7-111f089f8a3d" absoluteBounds="1.2650000000000001, 1.085, 1.9700000000000002, 4.2877197265625" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="15703dbe-c535-4ca8-bb35-5bf6e740ad8f" absoluteBounds="6.5, 0.5, 2, 2.7324039713541666">
+      <DataClassMoniker Name="/UserRoleDBDataContext/UserPerm" />
+      <nestedChildShapes>
+        <elementListCompartment Id="b1612ded-a4a3-4b03-9f7c-30494944dd78" absoluteBounds="6.515, 0.96, 1.9700000000000002, 2.1724039713541665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="3f452914-fa70-40bf-a0d6-4c5482e7655d" absoluteBounds="3.75, 0.625, 2, 1.1939925130208344">
+      <DataClassMoniker Name="/UserRoleDBDataContext/Role" />
+      <nestedChildShapes>
+        <elementListCompartment Id="fa5eec0e-1c98-4337-8b06-0323ce038383" absoluteBounds="3.765, 1.085, 1.9700000000000002, 0.63399251302083326" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="7bc4f9d6-eacb-4ff5-bbe9-d100a0be673d" absoluteBounds="6.5, 3.375, 2, 2.9247054036458326">
+      <DataClassMoniker Name="/UserRoleDBDataContext/RolePerm" />
+      <nestedChildShapes>
+        <elementListCompartment Id="02cb34a7-30f2-43f2-863e-5e19c6cc7743" absoluteBounds="6.515, 3.835, 1.9700000000000002, 2.364705403645833" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="3c696db9-2eed-4682-b383-98c0b9203dd3" absoluteBounds="3.75, 2.125, 2, 2.1554996744791666">
+      <DataClassMoniker Name="/UserRoleDBDataContext/Perm" />
+      <nestedChildShapes>
+        <elementListCompartment Id="5387ee95-786f-420c-90f9-34519b1c1991" absoluteBounds="3.765, 2.585, 1.9700000000000002, 1.5954996744791665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(5.75 : 2.67870198567708); (6.5 : 2.67870198567708)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/UserRoleDBDataContext/Perm/Perm_UserPerm" />
+      <nodes>
+        <classShapeMoniker Id="3c696db9-2eed-4682-b383-98c0b9203dd3" />
+        <classShapeMoniker Id="15703dbe-c535-4ca8-bb35-5bf6e740ad8f" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(5.75 : 3.82774983723958); (6.5 : 3.82774983723958)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/UserRoleDBDataContext/Perm/Perm_RolePerm" />
+      <nodes>
+        <classShapeMoniker Id="3c696db9-2eed-4682-b383-98c0b9203dd3" />
+        <classShapeMoniker Id="7bc4f9d6-eacb-4ff5-bbe9-d100a0be673d" />
+      </nodes>
+    </associationConnector>
+  </nestedChildShapes>
+</ordesignerObjectsDiagram>

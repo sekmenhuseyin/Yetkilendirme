@@ -1,0 +1,77 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="BIRIKIM" Class="UserRoleDBDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Table Name="usr.Users" Member="Users">
+    <Type Name="User">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Sirket" Type="System.String" DbType="VarChar(5) NOT NULL" CanBeNull="false" />
+      <Column Name="Tip" Type="System.Int16" DbType="SmallInt NOT NULL" CanBeNull="false" />
+      <Column Name="Kod" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Sifre" Type="System.String" DbType="VarChar(128) NOT NULL" CanBeNull="false" />
+      <Column Name="AdSoyad" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Email" Type="System.String" DbType="VarChar(100) NOT NULL" CanBeNull="false" />
+      <Column Name="RoleName" Type="System.String" DbType="VarChar(20) NOT NULL" CanBeNull="false" />
+      <Column Name="Tema" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Admin" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="Aktif" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="Kaydeden" Type="System.String" DbType="VarChar(5) NOT NULL" CanBeNull="false" />
+      <Column Name="KayitTarih" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="KayitSaat" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="KayitKaynak" Type="System.Int16" DbType="SmallInt NOT NULL" CanBeNull="false" />
+      <Column Name="KayitSurum" Type="System.String" DbType="VarChar(12) NOT NULL" CanBeNull="false" />
+      <Column Name="Degistiren" Type="System.String" DbType="VarChar(5) NOT NULL" CanBeNull="false" />
+      <Column Name="DegisTarih" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="DegisSaat" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="DegisKaynak" Type="System.Int16" DbType="SmallInt NOT NULL" CanBeNull="false" />
+      <Column Name="DegisSurum" Type="System.String" DbType="VarChar(12) NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="usr.UserPerm" Member="UserPerms">
+    <Type Name="UserPerm">
+      <Column Name="UserName" Type="System.String" DbType="VarChar(5) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="PermName" Type="System.String" DbType="VarChar(50) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="Reading" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="Writing" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="Updating" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="Deleting" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="RecordDate" Type="System.DateTime" DbType="SmallDateTime" CanBeNull="true" />
+      <Column Name="RecordUser" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Column Name="ModifiedDate" Type="System.DateTime" DbType="SmallDateTime" CanBeNull="true" />
+      <Column Name="ModifiedUser" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Association Name="Perm_UserPerm" Member="Perm" ThisKey="PermName" OtherKey="PermName" Type="Perm" IsForeignKey="true" DeleteRule="CASCADE" DeleteOnNull="true" />
+    </Type>
+  </Table>
+  <Table Name="usr.Roles" Member="Roles">
+    <Type Name="Role">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="RoleName" Type="System.String" DbType="VarChar(20) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="usr.RolePerm" Member="RolePerms">
+    <Type Name="RolePerm">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="RoleName" Type="System.String" DbType="VarChar(20) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="PermName" Type="System.String" DbType="VarChar(50) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="Reading" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="Writing" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="Updating" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="Deleting" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="RecordDate" Type="System.DateTime" DbType="SmallDateTime" CanBeNull="true" />
+      <Column Name="RecordUser" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Column Name="ModifiedDate" Type="System.DateTime" DbType="SmallDateTime" CanBeNull="true" />
+      <Column Name="ModifiedUser" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Association Name="Perm_RolePerm" Member="Perm" ThisKey="PermName" OtherKey="PermName" Type="Perm" IsForeignKey="true" DeleteRule="CASCADE" DeleteOnNull="true" />
+    </Type>
+  </Table>
+  <Table Name="usr.[Perm]" Member="Perms">
+    <Type Name="Perm">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="PermName" Type="System.String" DbType="VarChar(50) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="Active" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="Type" Type="System.Int16" DbType="SmallInt NOT NULL" CanBeNull="false" />
+      <Column Name="AppType" Type="System.Int16" DbType="SmallInt NOT NULL" CanBeNull="false" />
+      <Column Name="[Group]" Member="Group" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="RecordDate" Type="System.DateTime" DbType="SmallDateTime" CanBeNull="true" />
+      <Association Name="Perm_UserPerm" Member="UserPerms" ThisKey="PermName" OtherKey="PermName" Type="UserPerm" />
+      <Association Name="Perm_RolePerm" Member="RolePerms" ThisKey="PermName" OtherKey="PermName" Type="RolePerm" />
+    </Type>
+  </Table>
+</Database>
