@@ -106,9 +106,9 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Yetkilendirme12M\Yetkilendirme12M.csproj">
+    <ProjectReference Include="..\Yetkilendirme\Yetkilendirme.csproj">
       <Project>{6B05930E-9898-428A-A5FF-8FE8258CB9C8}</Project>
-      <Name>Yetkilendirme12M</Name>
+      <Name>Yetkilendirme</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>

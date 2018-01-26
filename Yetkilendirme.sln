@@ -1,7 +1,9 @@
 ﻿
-Microsoft Visual Studio Solution File, Format Version 11.00
-# Visual Studio 2010
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Yetkilendirme12M", "Yetkilendirme12M\Yetkilendirme12M.csproj", "{6B05930E-9898-428A-A5FF-8FE8258CB9C8}"
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.27130.2026
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Yetkilendirme", "Yetkilendirme\Yetkilendirme.csproj", "{6B05930E-9898-428A-A5FF-8FE8258CB9C8}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WinTestApp", "WinTestApp\WinTestApp.csproj", "{014CE36E-D6E7-42CC-85DB-C0E223A39384}"
 EndProject
@@ -38,5 +40,8 @@ Global
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {34240201-D417-4DFF-B3D9-71621015F614}
 	EndGlobalSection
 EndGlobal
